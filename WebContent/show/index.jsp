@@ -76,8 +76,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						
 				<% 
 					Object username=session.getAttribute("username"); 
+					System.out.println(username);
 				%>
-				<%! 
+				<% 
 					Boolean flag = false;
 				%>
 				<%
@@ -86,7 +87,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 								flag = true;
 							}else{
 								username = "您来到小二的店";
-							
 							}
 						%>
 						<h5>欢迎<%=username %></h5>
@@ -118,7 +118,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<li><a href="#" title="分享"><i class="fa fa-bicycle"></i></a></li>
 							<li><a href="#" name=""><i class=""></i></a></li>
 							
+							
+							
 						<c:if test="${flag}">
+						<li><a href="regist.jsp" title="注册" >注册</a></li>
+							<li><a href="login.jsp" title="登录">登录</a></li>
 						       <li><a href="logout.do" title="退出" >退出</a></li>
 						</c:if>
 						

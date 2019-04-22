@@ -43,7 +43,7 @@ public class UserDao {
 			PreparedStatement stmt=null;
 			try{
 				conn = DbUitl.openConnection();
-				String sql="insert into user values(null,?,?)";
+				String sql="insert into user values(null,?,?,null)";
 				stmt=conn.prepareStatement(sql);
 				stmt.setString(1,user.getUsername());
 				stmt.setString(2,user.getPassword());

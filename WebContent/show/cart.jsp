@@ -52,9 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<!--[if lt IE 9]>
 		<script src="js/html5/respond.min.js"></script>
     <![endif]-->
-    
 </head>
-
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
 	<div class="main-container">
 		<!-- Loader -->
